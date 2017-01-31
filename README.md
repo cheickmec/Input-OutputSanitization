@@ -18,21 +18,21 @@ The following **required** functionality is completed:
   * [X]  Required: new.php
   * [X]  Required: edit.php
 
-5\. [ ]  Required: Complete Staff CMS for States
-  * [ ]  Required: index.php
-  * [ ]  Required: show.php
-  * [ ]  Required: new.php
-  * [ ]  Required: edit.php
+5\. [X]  Required: Complete Staff CMS for States
+  * [X]  Required: index.php
+  * [X]  Required: show.php
+  * [X]  Required: new.php
+  * [X]  Required: edit.php
 
-6\. [ ]  Required: Complete Staff CMS for Territories
-  * [ ]  Required: index.php
-  * [ ]  Required: show.php
-  * [ ]  Required: new.php
-  * [ ]  Required: edit.php
+6\. [X]  Required: Complete Staff CMS for Territories
+  * [X]  Required: index.php
+  * [X]  Required: show.php
+  * [X]  Required: new.php
+  * [X]  Required: edit.php
 
-7\. [ ]  Required: Add Data Validations
-  * [ ]  Required: Validate that no values are left blank.
-  * [ ]  Required: Validate that all string values are less than 255 characters.
+7\. [X]  Required: Add Data Validations
+  * [X]  Required: Validate that no values are left blank.
+  * [X]  Required: Validate that all string values are less than 255 characters.
   * [ ]  Required: Validate that usernames contain only the whitelisted characters.
   * [ ]  Required: Validate that phone numbers contain only the whitelisted characters.
   * [ ]  Required: Validate that email addresses contain only whitelisted characters.
