@@ -282,11 +282,11 @@
     //Validate Phone number
     if(is_blank($salesperson['phone'])) {
       $errors[] = "Phone number cannot be blank.";
-    } elseif(!is_numeric($salesperson['phone'])){
-      $errors[] = "Phone number can only contain digits.";
-    } elseif(!has_length((string)$salesperson['phone'], array('min' => 3, 'max' => 10))){
-      $errors[] = "Phone number must be between 3 and 10 digits long.";
-    }
+    } elseif(!has_length((string)$salesperson['phone'], array('min' => 2, 'max' => 255))){
+      $errors[] = "Phone number must be between 2 and 255 characters long.";
+    } elseif(preg_match('/[^()0-9\s\-]/i', $salesperson['phone'])){
+			$errors[] = "Username may only contains alphanumeric characters, hyphens, parentheses and spaces. e.g. 1(555) 555-5555";
+		  }
 
     //Validate email
     if(!has_valid_email_format($salesperson['email'])){
@@ -338,11 +338,11 @@
       return $errors;
     }
 
-    $sql = "UPDATE users SET ";
+    $sql = "UPDATE salespeople SET ";
     $sql .= "first_name='" . $salesperson['first_name'] . "', ";
     $sql .= "last_name='" . $salesperson['last_name'] . "', ";
     $sql .= "phone='" . $salesperson['phone'] . "', ";
-    $sql .= "email='" . $salesperson['email'] . "', ";
+    $sql .= "email='" . $salesperson['email'] . "' ";
     $sql .= "WHERE id='" . $salesperson['id'] . "' ";
     $sql .= "LIMIT 1;";
 
@@ -417,7 +417,9 @@
       $errors[] = "Username cannot be blank.";
     } elseif (!has_length($user['username'], array('max' => 255))) {
       $errors[] = "Username must be less than 255 characters.";
-    }
+    } elseif(preg_match('/[^a-z_0-9]/i', $user['username'])){
+			  $errors[] = "Username may only contains alphanumeric characters and underscores.";
+		  }
     return $errors;
   }
 
