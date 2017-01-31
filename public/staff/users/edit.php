@@ -49,6 +49,7 @@ if(is_post_request()) {
     <input type="text" name="email" value="<?php echo $user['email']; ?>" /><br />
     <br />
     <input type="submit" name="submit" value="Update"  />
+
   </form>
 
 </div>

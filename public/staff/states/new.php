@@ -16,7 +16,8 @@ if(is_post_request()) {
 
   $result = insert_state($state);
   if($result === true) {
-    $new_id = db_insert($db);
+    $new_id = db_insert_id($db);
+    //echo("Error description: " . mysqli_error($db));
     redirect_to('show.php?id=' . $new_id);
   } else {
     $errors = $result;
