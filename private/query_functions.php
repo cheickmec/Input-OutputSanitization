@@ -463,6 +463,7 @@
     global $db;
 
     $errors = validate_user($user);
+    $user = sanitize_sql($db, $user);
     if (!empty($errors)) {
       return $errors;
     }

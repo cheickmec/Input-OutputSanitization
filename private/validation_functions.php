@@ -26,4 +26,11 @@
      }
      return filter_var($value, FILTER_VALIDATE_EMAIL);
    }
+
+  function sanitize_sql($connection, $val){
+    foreach ($val as $key => $value) {
+     $value = db_escape($connection, $value); 
+    }
+    return $val;
+  }
 ?>
