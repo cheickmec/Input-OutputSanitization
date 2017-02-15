@@ -65,6 +65,7 @@
     global $db;
 
     $errors = validate_state($state);
+    $state = sanitize_sql($db, $state);
     if (!empty($errors)) {
       return $errors;
     }
@@ -97,6 +98,7 @@
     global $db;
 
     $errors = validate_state($state);
+    $state = sanitize_sql($db, $state);
     if (!empty($errors)) {
       return $errors;
     }
@@ -173,6 +175,7 @@
     global $db;
 
     $errors = validate_territory($territory);
+    $territory = sanitize_sql($db, $territory);
     if (!empty($errors)) {
       return $errors;
     }
@@ -204,6 +207,7 @@
     global $db;
 
     $errors = validate_territory($territory);
+    $territory = sanitize_sql($db, $territory);
     if (!empty($errors)) {
       return $errors;
     }
@@ -302,6 +306,7 @@
     global $db;
 
     $errors = validate_salesperson($salesperson);
+    $salesperson = sanitize_sql($db, $salesperson);
     if (!empty($errors)) {
       return $errors;
     }
@@ -334,6 +339,7 @@
     global $db;
 
     $errors = validate_salesperson($salesperson);
+    $salesperson = sanitize_sql($db, $salesperson);
     if (!empty($errors)) {
       return $errors;
     }
@@ -429,6 +435,7 @@
     global $db;
 
     $errors = validate_user($user);
+    $user = sanitize_sql($db, $user);
     if (!empty($errors)) {
       return $errors;
     }
