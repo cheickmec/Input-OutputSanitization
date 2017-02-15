@@ -26,7 +26,7 @@ if(is_post_request()) {
 <?php include(SHARED_PATH . '/header.php'); ?>
 
 <div id="main-content">
-  <a href="../states/show.php?id=<?php echo $territory['state_id']; ?>">Back to State Details</a><br />
+  <a href="../states/show.php?id=<?php echo u($territory['state_id']); ?>">Back to State Details</a><br />
 
   <h1>Edit Territory: <?php echo $territory['name']; ?></h1>
 
@@ -35,9 +35,9 @@ if(is_post_request()) {
   <form action="edit.php?id=<?php echo $territory['id']; ?>" method="post">
 
     Name:<br />
-    <input type="text" name="name" value="<?php echo $territory['name']; ?>" /><br  />
+    <input type="text" name="name" value="<?php echo strip_tags($territory['name']); ?>" /><br  />
     Position:<br  />
-    <input type="text" name="position" value="<?php echo $territory['position']; ?>"/><br />
+    <input type="text" name="position" value="<?php echo strip_tags($territory['position']); ?>"/><br />
     <br />
     <input type="submit" name="submit" value="Create"  />
 

@@ -39,9 +39,9 @@ if(is_post_request()) {
 
   <form action="new.php?state_id=<?php echo $state['id']; ?>" method="post">
     Name:<br />
-    <input type="text" name="name" value="<?php echo $territory['name']; ?>" /><br  />
+    <input type="text" name="name" value="<?php echo strip_tags($territory['name']); ?>" /><br  />
     Position:<br  />
-    <input type="text" name="position" value="<?php echo $territory['position']; ?>"/><br />
+    <input type="text" name="position" value="<?php echo strip_tags($territory['position']); ?>"/><br />
     <br />
     <input type="submit" name="submit" value="Create"  />
   </form>

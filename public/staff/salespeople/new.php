@@ -38,16 +38,16 @@ if(is_post_request()) {
   <form action="new.php" method="post">
 
   	First name:<br />
-    <input type="text" name="first_name" value="<?php echo $salesperson['first_name']; ?>" /><br />
+    <input type="text" name="first_name" value="<?php echo strip_tags($salesperson['first_name']); ?>" /><br />
 
     Last name:<br />
-    <input type="text" name="last_name" value="<?php echo $salesperson['last_name']; ?>" /><br />
+    <input type="text" name="last_name" value="<?php echo strip_tags($salesperson['last_name']); ?>" /><br />
 
     Phone:<br />
-    <input type="text" name="phone" value="<?php echo $salesperson['phone']; ?>" /><br />
+    <input type="text" name="phone" value="<?php echo strip_tags($salesperson['phone']); ?>" /><br />
 
     Email:<br />
-    <input type="text" name="email" value="<?php echo $salesperson['email'];?>" /><br />
+    <input type="text" name="email" value="<?php echo strip_tags($salesperson['email']);?>" /><br />
     <br />
     <input type="submit" name="submit" value="Create" />
   </form>

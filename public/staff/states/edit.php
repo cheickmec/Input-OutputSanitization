@@ -35,9 +35,9 @@ if(is_post_request()) {
   <form action="edit.php?id=<?php echo $state['id']; ?>" method="post">
 
     Name:<br/>
-    <input type="text" name="name" value="<?php echo $state['name']; ?>" /><br />
+    <input type="text" name="name" value="<?php echo strip_tags($state['name']); ?>" /><br />
     Code:<br/>
-    <input type="text" name="code" value="<?php echo $state['code']; ?>" /><br/>
+    <input type="text" name="code" value="<?php echo strip_tags($state['code']); ?>" /><br/>
     <br />
     <input type="submit" name="submit" value="Update"  />
 
